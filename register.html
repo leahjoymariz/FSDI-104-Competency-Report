@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+      <link rel="stylesheet" href="styles/register.css">
+      <link rel="stylesheet" href="styles/displaypet.css">
+  
+    
+    
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>🐾Clip and Fluff🐾</h1>
+       <div class = "topnav-centered">
+        <ul>
+            <li><a href = "index.html">Index</a></li>
+            <li><a href = "about.html">About</a></li>
+            <li><a href = "services.html">Services</a></li>
+            <li><a href = "register.html">Register</a></li>
+        </ul>
+
+       </div>
+    </header>
+    <main>
+       <h2>🐶Register a new Pet🐶</h2>
+       <p>Pets in the Salon = 🐕<span id="numberOfPets">0</span></p>
+
+       <div class="container">
+        <div class="mb-3">
+            <label class="form-label">Name:</label>
+            <input type="text" class="form-control" id="txtName">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Age:</label>
+            <input type="number" class="form-control" id="txtAge">
+       </div>
+       <div class="mb-3">
+            <label class="form-label">Gender of the Pet:</label>
+            <select class="form-label" id="txtGender">
+                <option value="gender">Male</option>
+                <option value="gender">Female</option>
+            </select>
+            
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Breed:</label>
+            <input type="text" class="form-control" id="txtBreed">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Service:</label>
+            <select class="form-control" id="txtService">
+                <option value="" disabled>-- Select an Option--</option>
+                 <option value="grooming">Grooming</option>
+                <option value="nail trimming">Nail Trimming</option>
+                <option value="Bath">Bath</option>
+            </select>
+        </div>
+         <div class="mb-3">
+            <label class="form-label">Owner</label>
+            <input type="text" class="form-control" id="txtOwner">
+         </div>
+         <div class mb-3>
+            <label class="form-label">Phone Number</label>
+            <input type="text" class="form-control" id="txtPhone">
+         </div>
+
+        <button class="btn btn-light" onclick="register();">Register</button>
+        </div>
+
+        <div class="pets">
+            <!---all the pets go here-->
+
+            <div class="ms-5 mt-3">
+                <input id="txtSearch" type="search" placeholder="Search">
+                <button class="btn btn-sm btn-secondary" onclick="search()">Search</button>
+            </div>
+
+            
+            
+            <table class="table table-bordered table-striped ms-5 mt-3">
+                <thead class="table-secondary">
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Breed</th>
+                    <th>Service</th>
+                    <th>Owner</th>
+                    <th>Phone</th>
+                    <th>Options</th>
+                </thead>
+
+                <tbody id="tbPets-body">
+
+                </tbody>
+            </table>
+        
+        
+        
+        </div>
+        </main>
+    <footer id="footer">
+
+    </footer>
+
+    <script src="scripts/displayFooter.js"></script>
+    <script src="scripts/displayPets1.js"></script>   
+    <script src="scripts/register.js"></script>
+</body>
+</html>
